@@ -14,7 +14,15 @@ from keras.preprocessing.image import *
 
 class PSDataset(Dataset):
 
-    def __init__(self, root, state, train_ratio=0.8, image_size=320):
+    def __init__(self, root, state, train_ratio=0.8,
+                 image_size=320,
+                 rotation_range=180,
+                 width_shift_range=0.1,
+                 height_shift_range=0.1,
+                 zoom_range=0.3,
+                 horizontal_flip=True,
+                 vertical_flip=True,
+                 data_format='channels_last'):
         print('Init PSDataset {}...'.format(state))
         assert state in ['train', 'valid'], 'state error'
         self.root = root
@@ -40,13 +48,13 @@ class PSDataset(Dataset):
             print('train data num {}'.format(len(self.train_list)))
         if state == 'valid':
             print('valid data num {}'.format(len(self.valid_list)))
-        self.datagen = ImageDataGenerator(rotation_range=180,
-                                          width_shift_range=0.1,
-                                          height_shift_range=0.1,
-                                          zoom_range=0.3,
-                                          horizontal_flip=True,
-                                          vertical_flip=True,
-                                          data_format='channels_last')
+        self.datagen = ImageDataGenerator(rotation_range=rotation_range,
+                                          width_shift_range=width_shift_range,
+                                          height_shift_range=height_shift_range,
+                                          zoom_range=zoom_range,
+                                          horizontal_flip=horizontal_flip,
+                                          vertical_flip=vertical_flip,
+                                          data_format=data_format)
         self.stat_mean_std()
 
     def stat_mean_std(self):
