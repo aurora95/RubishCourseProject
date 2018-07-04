@@ -72,8 +72,11 @@ class PSDataset(Dataset):
         # pbar.close()
         # self.stat_mean = np.mean(np.concatenate(mean_list, axis=0), axis=0)
         # self.stat_std = np.mean(np.concatenate(std_list, axis=0), axis=0)
-        self.stat_mean = [83.84732, 73.78362, 52.863792]
-        self.stat_std = [23.832254, 24.810072, 27.171442]
+
+        #self.stat_mean = [83.84732, 73.78362, 52.863792]
+        #self.stat_std = [23.832254, 24.810072, 27.171442]
+        self.stat_mean = [0.485*255, 0.456*255, 0.406*255]
+        self.stat_std = [0.229*255, 0.224*255, 0.225*255]
 
     def get_index_label_info(self):
         return self.index_label_dict
