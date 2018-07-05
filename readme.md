@@ -31,27 +31,27 @@ There are 12 classes in total:
 ```
 $Root
 │
-│─ readme.md —— this file
+│─ readme.md —— This file
 │
-|─ basemodel.py —— basemodel definition
+|─ basemodel.py —— Basemodel definition
 │
-|─ download.sh —— dataset download shell script
+|─ download.sh —— Dataset download shell script
 │
-|─ model.py —— model definition
+|─ model.py —— Model definition
 │
 |─ PSDataset.py —— Dataset preprocessor
 │   
-|─ submission.py —— contest submission script
+|─ submission.py —— Contest submission script
 │   
-|─ train.py —— trainning script
+|─ train.py —— Training script
 │   
-└─ utils —— useful tools
+└─ utils —— Useful tools
    │
-   |─ logger.py —— log printing and saving tool
+   |─ logger.py —— Log printing and saving tool
    │
-   |─ metrics.py —— statistic tool
+   |─ metrics.py —— Statistic tool
    │
-   └─ progress_bar.py —— progress bar printing tool
+   └─ progress_bar.py —— Progress bar printing tool
 ```
 
 ## Result
