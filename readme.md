@@ -2,12 +2,15 @@
 
 [Plant Seedlings Classification contest on Kaggle](https://www.kaggle.com/c/plant-seedlings-classification)
 Determine the species of a seedling from an image
+![](images/raw.png)
+There are 12 classes in total:
+![](images/classes.png)
 
 |Author|Student number|
 |------|---------|
-|邢亚杰|1701214107|
-|李瑞麟|1701214088|
-| 王尧 |1701214013|
+|邢亚杰|N/A|
+|李瑞麟|N/A|
+| 王尧 |N/A|
 
 ## Collaboration
 |file_name|collaborator|
@@ -50,3 +53,8 @@ $Root
    │
    └─ progress_bar.py —— progress bar printing tool
 ```
+
+## Result
+
+![](images/loss.png)
+![](images/acc.png)
